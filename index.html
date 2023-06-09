@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1200px;
+            height: 50px;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 300px;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+        }
+
+
+
+        .fade-in {
+            opacity: 50;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in:hover {
+            opacity: 1;
+        }
+
+        .fade-in1 {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in:hover {
+            opacity: 1;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+        }
+
+        .navbar {
+            background-color: transparent;
+            /* 初始狀態為透明 */
+            transition: background-color 0.5s ease-in-out;
+            /* 設定過渡效果，0.3秒漸入，且加速度緩慢 */
+        }
+
+        .navbar:hover {
+            background-color: #000000;
+            /* 鼠標移過去時底色漸入 */
+            opacity: 70%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav .nav-item:hover a {
+            border-bottom: 2px solid #333;
+        }
+
+        .logo {
+            width: 180px;
+        }
+
+        .footer-item {
+            text-align: center;
+            margin: 0 1em;
+            padding: 3px;
+            list-style-type: none;
+        }
+
+        .bg-footer {
+            padding: 1em;
+            background-color: #3c3c3c;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container-border {
+            border: 3px solid #bb7979;
+            border-radius: 10pc;
+        }
+
+        .button {
+            background-color: #e48989;
+            /* 自訂義背景色，這裡使用紅色 (#ff0000) */
+            color: #ffffff;
+            /* 自訂義文字顏色，這裡使用白色 (#ffffff) */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .bg-img {
+            background-image: url(謝弘運/底-1.png);
+            background-position: center;
+            background-size: cover;
+            padding: 16em 3em;
+            height: 600px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tab_css {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab_css input {
+            display: none
+        }
+
+        .tab_css label {
+            margin: 0 5px 5px 0;
+            padding: 10px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            background: #fff;
+            color: #bb7979;
+            opacity: 0.5;
+        }
+
+        .tab_content {
+            order: 1;
+            display: none;
+            width: 100%;
+            line-height: 1.6;
+            font-size: .9em;
+            padding: 15px;
+
+        }
+
+        .tab_css input:checked+label,
+        .tab_css label:hover {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .tab_css input:checked+label+.tab_content {
+            display: initial;
+        }
+
+        .box5 {
+            height: 500px !important;
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box6 {
+            width: 500px;
+            height: 700px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box7 {
+            height: 700px;
+            width: 900px;
+        }
+
+        .header-nav {
+            height: 110px;
+            transition: 0.6s;
+        }
+
+        .nav-bg {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav .nav-item:hover a {
+            border-bottom: 2px solid #333;
+        }
+
+        .navbar .nav-link {
+            color: #EFDCBA !important;
+        }
+
+        .footer-link {
+            color: #EFDCBA;
+            text-decoration: none;
+        }
+
+        .main-img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 頭 -->
+    <div>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top align-items-start">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Manium_1.html" class="navbar-brand">
+                    <img width="100px" src="img/LOGO4.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--以下 navbar 項目 + section連接nav-item、下面內容 -->
+                <div id="navbarContent" class="collapse navbar-collapse show d-flex justify-content-end fixed-top p-3"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center nav-item:hover a">
+                        <li class="nav-item"><a class="nav-link" href="/Manium_1.html">品牌理念</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarContent"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">繪師介紹</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarContent">
+                                <li><a class="dropdown-item" href="/Manium_2.html">謝弘運</a></li>
+                                <li><a class="dropdown-item" href="#">劉得心</a></li>
+                                <li><a class="dropdown-item" href="https://fire0408.github.io/index2.html">小街</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarContent"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">近期活動</a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+                                aria-labelledby="navbarContent">
+                                <li><a class="dropdown-item" href="/Manium_3.html">▌ 排少專區 ▌</a></li>
+                                <li><a class="dropdown-item" href="#">▌ 數媒事变 ▌</a></li>
+                                <li><a class="dropdown-item" href="#">▌ 爆肝樹莓人的熬夜大冒險 ▌</a></li>
+                            </ul>
+
+                        <li class="nav-item"><a class="nav-link" href="#">聯絡我們</a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 按鈕 -->
+
+
+        <!-- 介紹 -->
+        <div class="bg-img">
+            <div class="d-flex justify-content-around">
+                <div class="d-flex bg-white shadow" style="border-radius: 30px">
+                    <div class="d-flex justify-content-between contain">
+                        <img src="謝弘運/頭.jpg" class="box4 m-5 main-img">
+                        <h3 class="m-5">謝弘運</h3>
+                    </div>
+
+                    <div class="box2 pt-5 pe-5">
+                        <h5>個人介紹</h5>
+                        <p>
+                            擅長厚塗風格的繪師。作品充滿豐富的色彩和厚實的筆觸，展現出獨特的質感和層次感。透過他細膩的筆觸和獨特的運用，他能夠將畫面中的細節表現得生動而豐滿，帶給觀眾強烈的視覺衝擊和情感共鳴。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 細項價目表 -->
+        <div class="container-border m-5 ">
+            <div class="container">
+                <div class="box"></div>
+                <div class="tab_css">
+                    <h1 class="text-center">委託項目</h1>
+                    <div class="box"></div>
+                    <!-- TAB1 打包區塊 start -->
+                    <input id="tab1" type="radio" name="tab" checked="checked" />
+                    <label for="tab1">商業委託</label>
+                    <div class="tab_content">
+                        <!-- 輪番 -->
+                        <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="box5 mx-auto">
+                                    <div class="carousel-item active ">
+                                        <div class="box7 mx-auto">
+                                            <img src="謝弘運/商1.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box7 mx-auto">
+                                            <img src="謝弘運/商2.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box7 mx-auto">
+                                            <img src="謝弘運/商3.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-itemv ">
+                                        <div class="box7 mx-auto">
+                                            <img src="謝弘運/商4.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box7 mx-auto">
+                                            <img src="謝弘運/底.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- TAB1 打包區塊 end -->
+
+                    <!-- TAB2 打包區塊 start -->
+                    <input id="tab2" type="radio" name="tab" checked="checked" />
+                    <label for="tab2">非商業委託</label>
+                    <div class="tab_content">
+                        <!-- 輪番 -->
+                        <div id="carouselExampleFade2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="box5 mx-auto">
+                                    <div class="carousel-item active ">
+                                        <div class="box6 mx-auto">
+                                            <img src="謝弘運/非1.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box6 mx-auto">
+                                            <img src="謝弘運/非2.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box6 mx-auto">
+                                            <img src="謝弘運/非3.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box6 mx-auto">
+                                            <img src="謝弘運/非4.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="box6 mx-auto">
+                                            <img src="謝弘運/非5.jpg" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- TAB2 打包區塊 end -->
+
+                </div>
+            </div>
+            <div class="box"></div>
+
+            <div class="box"></div>
+        </div>
+        <!-- 板底 -->
+        <div>
+            <div class="bg-footer m-0">
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                    <a href="/0514.html" class="logo">
+                        <img src="img/LOGO4.png" class="img-fluid">
+                    </a>
+                    <ul class="mb-0 p-0">
+                        <div class="d-flex flex-column flex-lg-row justify-content-end mt-3">
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">品牌理念</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">繪師介紹</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">繪師商店</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">近期活動</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">隱私權政策</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
